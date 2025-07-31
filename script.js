@@ -46,6 +46,14 @@ function populateCities(){
   currentCity=cities[0];
 }
 
+/* pretty-print distance */
+function formatDistance(m) {
+  if (m === null) return '—';
+  return m < 100
+    ? `${m} m`
+    : `${(m / 1000).toFixed(1)} km`;
+}
+
 /* --- Render list with minutes --- */
 function render(){
   const visible=PLACES
@@ -66,7 +74,7 @@ function render(){
           <span class="place-meta">
             <span class="cat">${p.category}</span> • ${
               p.distance != null
-                ? `📍 ${p.distance} m • ${p.minutes} min`
+                ? `📍 ${formatDistance(p.distance)} • ${p.minutes} min`
                 : '📍 —'
             }
           </span>
