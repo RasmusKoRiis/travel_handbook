@@ -100,21 +100,33 @@ function render(){
     .sort((a,b)=>(a.distance??1e9)-(b.distance??1e9));
 
     listWrap.innerHTML = visible.map(p => `
-        <li class="place-item">
-      <a class="place-link"
-        href="https://www.google.com/maps?q=${p.latitude},${p.longitude}"
-        target="_blank" rel="noopener">
-        <div class="place-title">${p.name}</div>
-        <span class="place-meta">
-          <span class="cat">${p.category}</span> • ${
-            p.distance != null
-              ? `📍 ${formatDistance(p.distance)} • ${p.minutes} min`
-              : '📍 —'
-          }
-        </span>
-      </a>
-    </li>`).join('');
+      <li class="place-item">
+        <a class="place-link"
+           href="https://www.google.com/maps?q=${p.latitude},${p.longitude}"
+           target="_blank" rel="noopener">
+          <div class="place-title">
+            ${p.name}
+            ${
+              p.link
+                ? `<span class="ext"
+                         onclick="event.stopPropagation(); window.open('${p.link}','_blank','noopener');">
+                     🔗
+                   </span>`
+                : ''
+            }
+          </div>
+          <span class="place-meta">
+            <span class="cat">${p.category}</span> • ${
+              p.distance != null
+                ? `📍 ${formatDistance(p.distance)} • ${p.minutes} min`
+                : '📍 —'
+            }
+          </span>
+        </a>
+      </li>
+    `).join('');
 }
+    
 
 /* --- Events --- */
 function bindEvents(){

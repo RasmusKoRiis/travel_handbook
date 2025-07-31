@@ -135,3 +135,12 @@
 .place-link:hover .place-title{
   text-decoration:underline; /* optional hover cue */
 }
+
+/* external-site icon */
+.ext{
+  font-size:0.9rem;
+  margin-left:0.4rem;
+  text-decoration:none;
+}
+.ext:hover{ text-decoration:underline; }
+
