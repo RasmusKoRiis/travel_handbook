@@ -35,6 +35,26 @@
     font-size:1.15rem;font-weight:600;text-transform:uppercase;
     background:#fff;
   }
+
+  /* === GEO fallback banner === */
+#geoBanner{
+  background:#fff3cd;
+  color:#8b5600;
+  padding:0.8rem 1rem;
+  font-size:0.9rem;
+  border-left:4px solid var(--color-accent);
+}
+#geoBanner button{
+  margin-left:0.6rem;
+  border:none;
+  background:var(--color-accent);
+  color:#fff;
+  font-weight:600;
+  padding:0.25rem 0.7rem;
+  border-radius:0.4rem;
+  cursor:pointer;
+}
+.hidden{display:none;}
   
   /* ---- Filter bar with PNG icons ---- */
   #filters{margin-top:0.6rem;display:flex;gap:0.7rem;justify-content:center;}

@@ -20,6 +20,8 @@ function parseCSV(txt){
 const citySel=document.getElementById('citySelect');
 const filterBtns=[...document.querySelectorAll('.filter-btn')];
 const listWrap=document.getElementById('placeList');
+const geoBanner  = document.getElementById('geoBanner');
+const retryBtn   = document.getElementById('retryGeo');
 
 /* --- State --- */
 let PLACES=[],currentCity='',activeFilter='',userPos=null;
@@ -85,11 +87,33 @@ function bindEvents(){
 }
 
 /* --- Geo --- */
+
+function showGeoBanner(show=true){
+  geoBanner.classList.toggle('hidden', !show);
+}
+
 function askLocation(){
-  if(!navigator.geolocation){render();return;}
+  if(!navigator.geolocation){
+    showGeoBanner(true);
+    render();
+    return;
+  }
+
   navigator.geolocation.getCurrentPosition(
-    p=>{userPos={lat:p.coords.latitude,lng:p.coords.longitude};render();},
-    ()=>render(),
+    pos=>{
+      userPos={lat:pos.coords.latitude,lng:pos.coords.longitude};
+      showGeoBanner(false);   // hide banner
+      render();
+    },
+    err=>{
+      console.warn('Geo denied or error', err);
+      showGeoBanner(true);    // show banner with retry
+      render();
+    },
     {enableHighAccuracy:true,timeout:8000,maximumAge:30000}
   );
 }
+
+/* hook up the retry button once */
+retryBtn.addEventListener('click', askLocation);
+
