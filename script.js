@@ -6,15 +6,31 @@ fetch('places.csv')
 
 /* --- CSV → objects --- */
 function parseCSV(txt){
-  const [head,...rows]=txt.trim().split('\n');
-  const keys=head.split(';').map(h=>h.trim())
-  return rows.map(r=>{
-    const v=r.split(';').map(c=>c.trim());
-    const obj={}; keys.forEach((k,i)=>obj[k]=v[i]);
+  const lines = txt.trim().split(/\r?\n/);            // handle \n or \r\n
+  const keys  = lines.shift().split(';').map(s => s.trim());
+
+  return lines.flatMap(line => {
+    if (!line.trim()) return [];                      // skip blank lines
+
+    const cols = line.split(';').map(c => c.trim());
+    if (cols.length < keys.length) {                  // not enough columns
+      console.warn('CSV row skipped (missing cells):', line);
+      return [];
+    }
+
+    const obj = {};
+    keys.forEach((k, i) => obj[k] = cols[i] || '');
+
+    /* lat / lon from latlng (semicolon file) */
     if (obj.latlng) {
       const [lat, lon] = obj.latlng.split(',').map(s => Number(s.trim()));
-      obj.latitude  = lat;
-      obj.longitude = lon;
+      if (Number.isFinite(lat) && Number.isFinite(lon)) {
+        obj.latitude  = lat;
+        obj.longitude = lon;
+      } else {
+        console.warn('Bad latlng, row skipped:', line);
+        return [];                                    // drop the bad row
+      }
     } else {
       obj.latitude  = null;
       obj.longitude = null;
@@ -22,6 +38,7 @@ function parseCSV(txt){
     return obj;
   });
 }
+
 
 /* --- DOM refs --- */
 const citySel=document.getElementById('citySelect');
