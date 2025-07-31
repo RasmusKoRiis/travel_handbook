@@ -1,14 +1,14 @@
-city,name,category,latitude,longitude
-Hong Kong,The Bear,Food,22.2819,114.1589
-Hong Kong,Kapok,Shopping,22.2810,114.1524
-Hong Kong,PMQ,Sightseeing,22.2834,114.1517
-Hong Kong,Yardbird,Food,22.2851,114.1510
-Hong Kong,Gough St.,Shopping,22.2831,114.1529
-Hong Kong,Star Ferry,Sightseeing,22.2940,114.1690
-Tokyo,Koffee Mameya,Food,35.6644,139.7093
-Tokyo,Dover St. Market,Shopping,35.6693,139.7034
-Tokyo,teamLab Borderless,Sightseeing,35.6272,139.7796
-Oslo,Vippa,Food,59.9020,10.7487
-Oslo,Fuglen Coffee,Food,59.9144,10.7419
-Oslo,Moniker,Shopping,59.9103,10.7395
-Oslo,Østbanehallen,Sightseeing,59.9116,10.7528
+city;name;category;latlng;comment
+Hong Kong;The Bear;Food;22.2819,114.1589;cosy craft-beer gastropub
+Hong Kong;Kapok;Shopping;22.2810,114.1524;local design & lifestyle store
+Hong Kong;PMQ;Sightseeing;22.2834,114.1517;heritage hub for art markets
+Hong Kong;Yardbird;Food;22.2851,114.1510;famous yakitori no-reservation spot
+Hong Kong;Gough St.;Shopping;22.2831,114.1529;indie boutiques + cafés strip
+Hong Kong;Star Ferry;Sightseeing;22.2940,114.1690;classical harbour crossing
+Tokyo;Koffee Mameya;Food;35.6644,139.7093;bean-centric coffee tasting bar
+Tokyo;Dover St. Market;Shopping;35.6693,139.7034;avant-garde fashion multibrand
+Tokyo;teamLab Borderless;Sightseeing;35.6272,139.7796;immersive digital art museum
+Oslo;Vippa;Food;59.9020,10.7487;harbourfront street-food hall
+Oslo;Fuglen Coffee;Food;59.9144,10.7419;retro café & cocktail bar
+Oslo;Moniker;Shopping;59.9103,10.7395;curated Scandinavian menswear
+Oslo;Østbanehallen;Sightseeing;59.9116,10.7528;old station arcade of eateries

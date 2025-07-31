@@ -7,11 +7,18 @@ fetch('places.csv')
 /* --- CSV → objects --- */
 function parseCSV(txt){
   const [head,...rows]=txt.trim().split('\n');
-  const keys=head.split(',').map(h=>h.trim());
+  const keys=head.split(';').map(h=>h.trim())
   return rows.map(r=>{
-    const v=r.split(',').map(c=>c.trim());
+    const v=r.split(';').map(c=>c.trim());
     const obj={}; keys.forEach((k,i)=>obj[k]=v[i]);
-    obj.latitude=Number(obj.latitude); obj.longitude=Number(obj.longitude);
+    if (obj.latlng) {
+      const [lat, lon] = obj.latlng.split(',').map(s => Number(s.trim()));
+      obj.latitude  = lat;
+      obj.longitude = lon;
+    } else {
+      obj.latitude  = null;
+      obj.longitude = null;
+    }
     return obj;
   });
 }
@@ -22,6 +29,8 @@ const filterBtns=[...document.querySelectorAll('.filter-btn')];
 const listWrap=document.getElementById('placeList');
 const geoBanner  = document.getElementById('geoBanner');
 const retryBtn   = document.getElementById('retryGeo');
+const searchInput = document.getElementById('searchInput');   // NEW
+let searchTerm = '';   
 
 /* --- State --- */
 let PLACES=[],currentCity='',activeFilter='',userPos=null;
@@ -57,7 +66,15 @@ function formatDistance(m) {
 /* --- Render list with minutes --- */
 function render(){
   const visible=PLACES
-    .filter(p=>p.city===currentCity && (!activeFilter||p.category===activeFilter))
+  .filter(p =>
+    p.city === currentCity &&
+    (!activeFilter || p.category === activeFilter) &&
+    (!searchTerm ||
+      p.name.toLowerCase().includes(searchTerm) ||
+      p.category.toLowerCase().includes(searchTerm) ||
+      (p.comment && p.comment.toLowerCase().includes(searchTerm))
+    )
+  )
     .map(p=>{
       const d=userPos?dist(userPos.lat,userPos.lng,p.latitude,p.longitude):null;
       const m=d!=null?Math.round(d/1000*12):null;          // 1000 m ≈ 12 min
@@ -67,23 +84,25 @@ function render(){
 
     listWrap.innerHTML = visible.map(p => `
         <li class="place-item">
-          <a href="https://www.google.com/maps?q=${p.latitude},${p.longitude}"
-             target="_blank" rel="noopener">
-            ${p.name}
-          </a>
-          <span class="place-meta">
-            <span class="cat">${p.category}</span> • ${
-              p.distance != null
-                ? `📍 ${formatDistance(p.distance)} • ${p.minutes} min`
-                : '📍 —'
-            }
-          </span>
-        </li>`).join('');
+      <a class="place-link"
+        href="https://www.google.com/maps?q=${p.latitude},${p.longitude}"
+        target="_blank" rel="noopener">
+        <div class="place-title">${p.name}</div>
+        <span class="place-meta">
+          <span class="cat">${p.category}</span> • ${
+            p.distance != null
+              ? `📍 ${formatDistance(p.distance)} • ${p.minutes} min`
+              : '📍 —'
+          }
+        </span>
+      </a>
+    </li>`).join('');
 }
 
 /* --- Events --- */
 function bindEvents(){
   citySel.addEventListener('change',e=>{currentCity=e.target.value;render();});
+
   filterBtns.forEach(btn=>{
     btn.addEventListener('click',()=>{
       const cat=btn.dataset.cat;
@@ -92,7 +111,28 @@ function bindEvents(){
       render();
     });
   });
+
+  /* ✨ dot → expand → collapse */
+  searchInput.addEventListener('click', ()=>{
+    if(!searchInput.classList.contains('open')){
+      searchInput.classList.add('open');
+      searchInput.focus();
+    }
+  });
+
+  searchInput.addEventListener('blur', ()=>{
+    if(!searchInput.value.trim()){      // empty → collapse
+      searchInput.classList.remove('open');
+    }
+  });
+
+  /* live filtering */
+  searchInput.addEventListener('input', e=>{
+    searchTerm = e.target.value.trim().toLowerCase();
+    render();
+  });
 }
+
 
 /* --- Geo --- */
 
