@@ -1,0 +1,74 @@
+:root {
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+  
+    --color-bg:     #FED766; /* page background */
+    --color-accent: #E0A326; /* warm-yellow accent */
+    --color-card:   #EFF1F3;
+    --color-text:   #1e1e1e;
+  }
+  
+  *, *::before, *::after { box-sizing: border-box; }
+  
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.5;
+  }
+  
+  /* ---- Header ---- */
+  header{
+    position: sticky; top:0; z-index:10;
+    display:flex;flex-direction:column;align-items:center;
+    padding:0.9rem 1rem 0.8rem;
+    background:var(--color-bg);
+    border-bottom:2px solid var(--color-accent);
+  }
+  
+  /* Dropdown (caps) */
+  #citySelect{
+    width:100%;max-width:20rem;
+    border:2px solid var(--color-accent);border-radius:0.5rem;
+    padding:0.5rem 0.9rem;text-align:center;
+    font-size:1.15rem;font-weight:600;text-transform:uppercase;
+    background:#fff;
+  }
+  
+  /* ---- Filter bar with PNG icons ---- */
+  #filters{margin-top:0.6rem;display:flex;gap:0.7rem;justify-content:center;}
+  
+  .filter-btn{
+    border:none;background:transparent;cursor:pointer;opacity:0.55;
+    transition:opacity .2s,transform .15s;
+    padding:0;
+  }
+  .filter-btn img{width:38px;height:38px;display:block;}
+
+  .filter-btn.active{
+    opacity:1;transform:scale(1.15);
+    filter:drop-shadow(0 0 2px var(--color-accent));
+  }
+
+  .place-meta .cat { color:#8b0000;font-weight: 700;  }
+  
+  /* ---- Place list ---- */
+  #placeList{list-style:none;margin:0;padding:1rem;display:flex;flex-direction:column;gap:1rem;}
+  
+  .place-item{
+    background:var(--color-card);
+    border-left:4px solid var(--color-accent);
+    padding:0.8rem 1rem;border-radius:0.55rem;
+    box-shadow:0 2px 4px rgba(0,0,0,.07);
+  }
+  
+  .place-item a{font-weight:500;font-size:1.05rem;text-decoration:none;color:inherit;}
+  .place-item a:hover{text-decoration:underline;}
+  
+  .place-meta{font-size:0.85rem;opacity:0.8;}
+  
+  footer{text-align:center;padding:2rem 1rem;font-size:0.75rem;}
+  
+  @media(min-width:600px){#filters{gap:1rem}}
+  

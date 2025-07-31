@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Curator</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <!-- City selector -->
+    <select id="citySelect" aria-label="Select a city">
+      <option disabled selected>Loading…</option>
+    </select>
+
+    <!-- NEW: PNG-based filter bar -->
+    <nav id="filters">
+      <button class="filter-btn" data-cat="Food"        aria-label="Food"><img src="fork.png"     alt="Food"></button>
+      <button class="filter-btn" data-cat="Shopping"    aria-label="Shopping"><img src="money.png"   alt="Shopping"></button>
+      <button class="filter-btn" data-cat="Sightseeing" aria-label="Sightseeing"><img src="glasses.png" alt="Sightseeing"></button>
+    </nav>
+  </header>
+
+  <ul id="placeList"></ul>
+
+  <footer><small>© 2025 City Curator</small></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
