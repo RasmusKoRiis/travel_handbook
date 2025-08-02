@@ -1,27 +1,8 @@
 /* ─────────────────────────  CONFIG  ───────────────────────── */
 const CITIES       = ['Utopia', 'Osaka', 'Hong Kong'];   // add more JSONs here
 const DATA_DIR     = 'data';                             // folder for city JSON
-const GUMROAD_USER = 'rasmuskoriis';                     // ← your Gumroad user-name
+const GUMROAD_USER = 'YOUR_ACCOUNT';                     // Gumroad user
 /* ───────────────────────────────────────────────────────────── */
-
-/* ---------- Gumroad product-ID map (slug → product_id) ------ */
-/* copy the “product_id” string from the sample-key block on    */
-/* each product’s *Content* tab and paste it here               */
-const PRODUCT_ID = {
-  osaka:    'FOdyJTAQL7WoDm_T6ds1Xg==',
-  hongkong: 'PUT-HK-PRODUCT_ID-HERE'
-  // tokyo: '…'  ← add more when you sell new cities
-};
-
-
-/* direct checkout URLs – easiest to share & always valid */
-const PRODUCT_URL = {
-  osaka:    'https://rasmuskoriis.gumroad.com/l/osaka',      // ← copy from Product ▸ Share
-  hongkong: 'https://rasmuskoriis.gumroad.com/l/hongkong'
-  // tokyo: 'https://…'
-};
-
-/* ------------------------------------------------------------ */
 
 /* ---------- DOM refs ---------- */
 const citySel   = document.getElementById('citySelect');
@@ -36,6 +17,13 @@ const unlockBtn = document.getElementById('unlockBtn');
 /* ---------- State ---------- */
 let PLACES=[], currentCity='', activeFilter='', userPos=null, searchTerm='';
 
+/* ---------- Prefix table ---------- */
+let CODE_PREFIX={};
+fetch('codes.json')
+  .then(r=>r.ok?r.json():{})
+  .then(obj=>{ CODE_PREFIX=obj; gateAndLoad(currentCity); })
+  .catch(()=>console.warn('codes.json missing – all cities free'));
+
 /* ---------- Helpers ---------- */
 const R=6371000, toRad=d=>d*Math.PI/180;
 const dist=(aLat,aLng,bLat,bLng)=>{
@@ -44,79 +32,30 @@ const dist=(aLat,aLng,bLat,bLng)=>{
   return Math.round(R*2*Math.atan2(Math.sqrt(h),Math.sqrt(1-h)));
 };
 const fmt=m=>m==null?'—':m<100?`${m} m`:`${(m/1000).toFixed(1)} km`;
+const hasCode=slug=>{
+  if(slug==='utopia') return true;
+  const pre=CODE_PREFIX[slug]; if(!pre) return false;
+  return (localStorage.getItem(`code-${slug}`)||'').startsWith(pre);
+};
 
-/* ---------- Licence helpers ---------- */
-const cacheKey = slug => `license-${slug}`;
-
-function isUnlocked(slug){
-  if (slug==='utopia') return true;                 // demo city
-  return !!localStorage.getItem(cacheKey(slug));    // cached & verified before
-}
-
-async function verifyLicense(slug, key){
-  const pid = PRODUCT_ID[slug];
-  if (!pid) { console.warn('No product_id for', slug); return false; }
-
-  try{
-    const res = await fetch('https://api.gumroad.com/v2/licenses/verify', {
-      method: 'POST',
-      headers:{ 'Content-Type':'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        product_id: pid,
-        license_key: key,
-        increment_uses_count: 'false'
-      })
-    }).then(r=>r.json());
-
-    return res.success;
-  }catch(e){
-    console.error('Gumroad API', e);
-    return false;
-  }
+function resetFilter(){
+  activeFilter = '';
+  filterBtns.forEach(b => b.classList.remove('active'));
 }
 
 /* ---------- GATE + LOAD ---------- */
-function resetFilter(){
-  activeFilter=''; filterBtns.forEach(b=>b.classList.remove('active'));
-}
-
 async function gateAndLoad(city){
-  const slug = city.toLowerCase().replace(/\s+/g,'');
-
-  /* already verified earlier? */
-  if (isUnlocked(slug)){
-    buyBtn.classList.add('hidden'); unlockBtn.classList.add('hidden');
+  const slug=city.toLowerCase().replace(/\s+/g,'');
+  if(hasCode(slug)){                   /* unlocked */
     resetFilter();
-    return fetchJSON(slug, city);
+    buyBtn.classList.add('hidden'); unlockBtn.classList.add('hidden');
+    return fetchJSON(slug,city);
   }
-
-  /* locked: blank list + buttons */
+  /* locked */
   PLACES=[]; render();
   buyBtn.classList.remove('hidden'); unlockBtn.classList.remove('hidden');
-
-  buyBtn.onclick = () => {
-    const url = PRODUCT_URL[slug] || `https://gumroad.com/${GUMROAD_USER}/${slug}`;
-    window.open(url, '_blank', 'noopener');
-  };
-
-  unlockBtn.onclick = async ()=>{
-    const key = prompt('Paste your Gumroad license key:')?.trim();
-    if (!key) return;
-
-    unlockBtn.textContent = 'Checking…';
-    const ok = await verifyLicense(slug, key);
-    unlockBtn.textContent = 'I have a code 🔑';
-
-    if (ok){
-      localStorage.setItem(cacheKey(slug), key);
-      buyBtn.classList.add('hidden'); unlockBtn.classList.add('hidden');
-      gateAndLoad(city);                    // reload now unlocked
-    }else{
-      alert('That key is not valid for this city.');
-    }
-  };
+  buyBtn.onclick=()=>window.open(`https://gumroad.com/${GUMROAD_USER}/${slug}`,'_blank');
 }
-
 async function fetchJSON(slug,city){
   try{
     const data=await fetch(`${DATA_DIR}/${slug}.json`).then(r=>{
@@ -156,7 +95,7 @@ function render(){
     <li class="place-item">
       <a class="place-link" href="https://www.google.com/maps?q=${p.latitude},${p.longitude}" target="_blank" rel="noopener">
         <div class="place-title">${p.name}</div>
-        ${p.link?`<span class="ext-icon" onclick="event.stopPropagation();window.open('${p.link}','_blank','noopener');">🟡 </span>`:''}
+        ${p.link?`<span class="ext-icon" onclick="event.stopPropagation();window.open('${p.link}','_blank','noopener');">🔗</span>`:''}
         <span class="place-meta"><span class="cat">${p.category}</span> • ${
           p.distance!=null?`📍 ${fmt(p.distance)} • ${p.minutes} min`:'📍 —'}</span>
       </a>
@@ -165,8 +104,10 @@ function render(){
 
 /* ---------- Events ---------- */
 function bindEvents(){
-  citySel.addEventListener('change', e=>{
-    currentCity=e.target.value; resetFilter(); gateAndLoad(currentCity);
+  citySel.addEventListener('change', e => {
+    currentCity = e.target.value;
+    resetFilter();                // clear 🐾
+    gateAndLoad(currentCity);     // then load / gate
   });
   filterBtns.forEach(btn=>{
     btn.addEventListener('click',()=>{
@@ -177,6 +118,18 @@ function bindEvents(){
     });
   });
   searchInput.addEventListener('input',e=>{searchTerm=e.target.value.trim().toLowerCase();render();});
+
+  /* UNLOCK always available */
+  unlockBtn.addEventListener('click',()=>{
+    const slug=currentCity.toLowerCase().replace(/\s+/g,'');
+    const code=prompt('Paste your access code:')||'';
+    if(!code) return;
+    if(code.startsWith((CODE_PREFIX[slug]||''))){
+      localStorage.setItem(`code-${slug}`,code);
+      buyBtn.classList.add('hidden'); unlockBtn.classList.add('hidden');
+      gateAndLoad(currentCity);
+    }else alert('Invalid code – please check your Gumroad e-mail.');
+  });
 }
 
 /* ---------- Geo ---------- */
@@ -191,5 +144,7 @@ function askLocation(){
 retryBtn.addEventListener('click',askLocation);
 
 /* ---------- Boot ---------- */
-function init(){ populateCities(); bindEvents(); askLocation(); gateAndLoad(currentCity); }
+function init(){
+  populateCities(); bindEvents(); askLocation(); gateAndLoad(currentCity);
+}
 init();

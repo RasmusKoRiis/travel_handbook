@@ -23,6 +23,11 @@
       <button class="filter-btn" data-cat="Sightseeing" aria-label="Sightseeing"><img src="glasses.png" alt="Sightseeing"></button>
     </nav>
 
+    <!-- ✅ below your filter bar -->
+    <button id="buyBtn" class="buy hidden">Get this city (€5) ↗</button>
+    <button id="unlockBtn" class="unlock hidden">I have a code 🔑</button>
+
+
     <input id="searchInput"
        class="search-bar"
        type="search"
@@ -41,5 +46,10 @@
   <footer><small>© 2025 City Curator</small></footer>
 
   <script src="script.js"></script>
+  <script>
+    // register Service-Worker for offline
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');
+  </script>
+
 </body>
 </html>

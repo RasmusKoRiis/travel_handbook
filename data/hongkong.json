@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Victoria Peak",
+      "category": "Sightseeing",
+      "latlng": "22.27590,114.14540",
+      "comment": "Spectacular harbor panoramas from iconic hilltop lookout",
+      "link": "https://www.thepeak.com.hk"
+    },
+    {
+      "name": "Peak Tram",
+      "category": "Sightseeing",
+      "latlng": "22.27750,114.15860",
+      "comment": "Historic funicular ride climbing steep hillside to The Peak",
+      "link": "https://www.thepeak.com.hk/en/5_peak-tram"
+    },
+    {
+      "name": "Star Ferry",
+      "category": "Sightseeing",
+      "latlng": "22.28710,114.16570",
+      "comment": "Classic green ferry crossing Victoria Harbour with skyline views",
+      "link": "https://www.starferry.com.hk"
+    },
+    {
+      "name": "Hong Kong Disneyland",
+      "category": "Sightseeing",
+      "latlng": "22.31290,114.03870",
+      "comment": "Magical theme park with rides and Disney parades",
+      "link": "https://www.hongkongdisneyland.com"
+    },
+    {
+      "name": "Ocean Park",
+      "category": "Sightseeing",
+      "latlng": "22.24840,114.17500",
+      "comment": "Marine park mixing animal exhibits and thrill rides",
+      "link": "https://www.oceanpark.com.hk"
+    }
+  ]
+  

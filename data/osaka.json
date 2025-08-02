@@ -1,0 +1,150 @@
+[
+    {
+      "name": "Osaka Castle",
+      "category": "Sightseeing",
+      "latlng": "34.68730,135.52620",
+      "comment": "Impressive reconstructed castle with history museum and cherry blossoms",
+      "link": "https://www.osakacastle.net"
+    },
+    {
+      "name": "Abeno Harukas",
+      "category": "Sightseeing",
+      "latlng": "34.64570,135.51380",
+      "comment": "Sky-high views from Japan's tallest skyscraper and mall",
+      "link": "https://www.abenoharukas-300.jp/en"
+    },
+    {
+      "name": "Umeda Sky Building",
+      "category": "Sightseeing",
+      "latlng": "34.70550,135.48910",
+      "comment": "Architectural marvel with floating garden observatory panoramas",
+      "link": "https://www.kuchu-teien.com"
+    },
+    {
+      "name": "Shitenno-ji Temple",
+      "category": "Sightseeing",
+      "latlng": "34.65250,135.51720",
+      "comment": "Ancient Buddhist temple with pagoda and serene gardens",
+      "link": "https://www.shitennoji.or.jp"
+    },
+    {
+      "name": "Sumiyoshi Taisha",
+      "category": "Sightseeing",
+      "latlng": "34.61240,135.49100",
+      "comment": "Oldest shrine; distinctive straight-line bridge and festival site",
+      "link": "https://www.sumiyoshitaisha.net"
+    },
+    {
+      "name": "Tsutenkaku Tower",
+      "category": "Sightseeing",
+      "latlng": "34.65290,135.50650",
+      "comment": "Iconic tower in retro Shinsekai district with observation deck",
+      "link": "https://www.tsutenkaku.co.jp"
+    },
+    {
+      "name": "Osaka Aquarium Kaiyukan",
+      "category": "Sightseeing",
+      "latlng": "34.65450,135.42890",
+      "comment": "World-class aquarium with giant whale sharks and immersive tanks",
+      "link": "https://www.kaiyukan.com"
+    },
+    {
+      "name": "Tempozan Ferris Wheel",
+      "category": "Sightseeing",
+      "latlng": "34.65400,135.43010",
+      "comment": "Giant waterfront Ferris wheel offering harbour views",
+      "link": "https://www.senyo.co.jp/tempozan"
+    },
+    {
+      "name": "Osaka Museum of History",
+      "category": "Sightseeing",
+      "latlng": "34.68280,135.52650",
+      "comment": "Modern museum tracing Osaka's past through interactive exhibits",
+      "link": "https://www.mus-his.city.osaka.jp"
+    },
+    {
+      "name": "National Bunraku Theater",
+      "category": "Sightseeing",
+      "latlng": "34.67590,135.50970",
+      "comment": "Traditional puppet theatre showcasing Japanese bunraku performances",
+      "link": "https://www.ntj.jac.go.jp/bunraku"
+    },
+    {
+      "name": "National Art Museum",
+      "category": "Sightseeing",
+      "latlng": "34.69130,135.50330",
+      "comment": "Underground museum featuring modern and contemporary art",
+      "link": "https://www.nmao.go.jp"
+    },
+    {
+      "name": "Minoo Park",
+      "category": "Sightseeing",
+      "latlng": "34.84540,135.47030",
+      "comment": "Forest park with waterfall and vibrant autumn foliage",
+      "link": "https://www.mino-park.jp"
+    },
+    {
+      "name": "Osaka Mint Bureau",
+      "category": "Sightseeing",
+      "latlng": "34.69830,135.51360",
+      "comment": "Riverside museum famous for cherry-blossom tunnel",
+      "link": "https://www.mint.go.jp"
+    },
+    {
+      "name": "Hozenji Temple",
+      "category": "Sightseeing",
+      "latlng": "34.66900,135.50280",
+      "comment": "Tiny moss-covered temple hidden off lantern-lit alley",
+      "link": ""
+    },
+    {
+      "name": "Hozenji Yokocho",
+      "category": "Sightseeing",
+      "latlng": "34.66930,135.50270",
+      "comment": "Atmospheric stone alley lined with izakaya and lanterns",
+      "link": ""
+    },
+    {
+      "name": "Nakanoshima Park",
+      "category": "Sightseeing",
+      "latlng": "34.69300,135.50650",
+      "comment": "Riverside park with rose garden and cultural buildings",
+      "link": ""
+    },
+    {
+      "name": "Utsubo Park",
+      "category": "Sightseeing",
+      "latlng": "34.68340,135.49400",
+      "comment": "Urban oasis known for tennis courts and roses",
+      "link": ""
+    },
+    {
+      "name": "Kids Plaza Osaka",
+      "category": "Sightseeing",
+      "latlng": "34.70490,135.51090",
+      "comment": "Interactive museum encouraging hands-on play and exploration",
+      "link": "https://www.kidsplaza.or.jp"
+    },
+    {
+      "name": "Osaka Science Museum",
+      "category": "Sightseeing",
+      "latlng": "34.69190,135.50320",
+      "comment": "Four-floor museum with planetarium and fun experiments",
+      "link": "https://www.sci-museum.jp"
+    },
+    {
+      "name": "Osaka Tenmangu Shrine",
+      "category": "Sightseeing",
+      "latlng": "34.69690,135.51000",
+      "comment": "Historic shrine hosting Tenjin Matsuri festival",
+      "link": "https://osakatemmangu.or.jp"
+    },
+    {
+      "name": "Takashimaya Osaka",
+      "category": "Shopping",
+      "latlng": "34.66690,135.50150",
+      "comment": "High-end department store famed for food hall",
+      "link": "https://www.takashimaya.co.jp"
+    }
+  ]
+  
