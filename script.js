@@ -45,6 +45,11 @@ const dist=(aLat,aLng,bLat,bLng)=>{
 };
 const fmt=m=>m==null?'—':m<100?`${m} m`:`${(m/1000).toFixed(1)} km`;
 
+function toggleIntroUI(isIntro){
+  document.getElementById('filters').style.display = isIntro ? 'none':'flex';
+  searchInput.style.display = isIntro ? 'none':'block';
+}
+
 /* ---------- Licence helpers ---------- */
 const cacheKey = slug => `license-${slug}`;
 
@@ -122,9 +127,12 @@ async function fetchJSON(slug,city){
     const data=await fetch(`${DATA_DIR}/${slug}.json`).then(r=>{
       if(!r.ok) throw new Error('missing JSON'); return r.json();
     });
-    PLACES=data.map(p=>{
-      const [lat,lon]=p.latlng.split(',').map(n=>Number(n.trim()));
-      return {...p,city,latitude:lat,longitude:lon};
+    PLACES = data.map(p=>{
+      let lat=null, lon=null;
+      if (p.latlng){                     /* real guide entries */
+        [lat,lon] = p.latlng.split(',').map(n=>Number(n.trim()));
+      }
+      return {...p, city, latitude:lat, longitude:lon};
     });
     render();
   }catch(e){
@@ -138,30 +146,62 @@ function populateCities(){
   currentCity=CITIES[0];
 }
 function render(){
-  const show=PLACES.filter(p=>
-      p.city===currentCity &&
-      (!activeFilter||p.category===activeFilter) &&
-      (!searchTerm||
-        p.name.toLowerCase().includes(searchTerm)||
-        p.category.toLowerCase().includes(searchTerm)||
-        (p.comment&&p.comment.toLowerCase().includes(searchTerm))
-      ))
-    .map(p=>{
-      const d=userPos?dist(userPos.lat,userPos.lng,p.latitude,p.longitude):null;
-      const m=d!=null?Math.round(d/1000*12):null;
-      return {...p,distance:d,minutes:m};
-    })
-    .sort((a,b)=>(a.distance??1e9)-(b.distance??1e9));
-  listWrap.innerHTML=show.map(p=>`
-    <li class="place-item">
-      <a class="place-link" href="https://www.google.com/maps?q=${p.latitude},${p.longitude}" target="_blank" rel="noopener">
-        <div class="place-title">${p.name}</div>
-        ${p.link?`<span class="ext-icon" onclick="event.stopPropagation();window.open('${p.link}','_blank','noopener');">🟡 </span>`:''}
-        <span class="place-meta"><span class="cat">${p.category}</span> • ${
-          p.distance!=null?`📍 ${fmt(p.distance)} • ${p.minutes} min`:'📍 —'}</span>
-      </a>
-    </li>`).join('');
-}
+    const show = PLACES.filter(p=>{
+        if (p.city !== currentCity) return false;
+  
+        /* category filter */
+        const catOK = !activeFilter ||
+          (p.category && p.category.trim().toLowerCase() === activeFilter);
+  
+        /* search bar */
+        const q = searchTerm;
+        const searchOK = !q ||
+          p.name.toLowerCase().includes(q) ||
+          (p.category && p.category.toLowerCase().includes(q)) ||
+          (p.comment  && p.comment.toLowerCase().includes(q));
+  
+        return catOK && searchOK;
+      })
+       .map(p=>{
+         const useDist = Number.isFinite(p.latitude) && Number.isFinite(p.longitude);
+         const d = (userPos && useDist) ? dist(userPos.lat,userPos.lng,p.latitude,p.longitude) : null;
+         const m = d != null ? Math.round(d/1000*12) : null;
+  
+         const commentHTML = p.comment
+           ? `<div class="comment">${p.comment.replace(/\n/g,'<br>')}</div>`
+           : '';
+  
+         return {...p,distance:d,minutes:m,commentHTML};
+       })
+       .sort((a,b)=>(a.distance ?? 1e9) - (b.distance ?? 1e9));
+  
+     listWrap.innerHTML = show.map(p=>`
+       <li class="place-item">
+         <a class="place-link"
+            href="https://www.google.com/maps?q=${p.latitude},${p.longitude}"
+            target="_blank" rel="noopener">
+           <div class="place-title">${p.name}</div>
+           ${p.link
+              ? `<span class="ext-icon"
+                     onclick="event.stopPropagation();
+                              window.open('${p.link}','_blank','noopener');">🟡</span>`
+              : ''}
+           ${
+              /* ───── meta line only when something to show ───── */
+              (p.category || p.distance!=null)
+                ? `<span class="place-meta">
+                     ${p.category ? `<span class="cat">${p.category}</span>` : ''}
+                     ${p.category && p.distance!=null ? ' • ' : ''}
+                     ${p.distance!=null ? `📍 ${fmt(p.distance)} • ${p.minutes} min` : ''}
+                   </span>`
+                : ''
+           }
+           ${p.commentHTML}
+         </a>
+       </li>`).join('');
+  }
+  
+
 
 /* ---------- Events ---------- */
 function bindEvents(){
@@ -170,9 +210,11 @@ function bindEvents(){
   });
   filterBtns.forEach(btn=>{
     btn.addEventListener('click',()=>{
-      const cat=btn.dataset.cat;
-      activeFilter=activeFilter===cat?'':cat;
-      filterBtns.forEach(b=>b.classList.toggle('active',b.dataset.cat===activeFilter));
+      const cat = btn.dataset.cat.trim().toLowerCase();     // ← normalise once
+      activeFilter = activeFilter === cat ? '' : cat;
+      filterBtns.forEach(b =>
+        b.classList.toggle('active', b.dataset.cat.trim().toLowerCase() === activeFilter)
+      );
       render();
     });
   });

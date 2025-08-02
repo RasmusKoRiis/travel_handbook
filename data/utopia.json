@@ -1,38 +1,43 @@
 [
     {
-      "name": "Dream Plaza",
-      "category": "Sightseeing",
-      "latlng": "0.0000,0.0000",
-      "comment": "Central hub with lush gardens",
-      "link": ""
+      "name": "👋  Welcome to City Curator",
+      "comment": "This demo page shows you **every feature** in 60 seconds.\n\n• All real guides work exactly the same way.\n• Feel free to tap around — nothing here requires a licence key."
     },
     {
-      "name": "Crystal Lake",
-      "category": "Sightseeing",
-      "latlng": "0.0100,0.0050",
-      "comment": "Serene lake reflecting the clouds",
-      "link": ""
+      "name": "1️⃣  Pick a city",
+      "comment": "Open the drop-down at the top and choose **Osaka** or **Hong Kong**.\n\n> Each city is a hand-curated short-list — no ads, no AI-generated fluff."
     },
     {
-      "name": "Skyline Café",
-      "category": "Food",
-      "latlng": "0.0030,0.0040",
-      "comment": "Rooftop coffee bar with 360° views",
-      "link": ""
+      "name": "2️⃣  Filter & Search",
+      "comment": "• Tap the 🍴 Food, 💰 Shopping or 🕶 Sight-seeing icons to filter.\n• Type in the Search bar to jump straight to *ramen*, *museum* … anything."
     },
     {
-      "name": "Sunset Market",
-      "category": "Shopping",
-      "latlng": "0.0020,0.0060",
-      "comment": "Open-air evening market of crafts & bites",
-      "link": ""
+      "name": "3️⃣  Distance + time",
+      "comment": "If you allow location, we calculate a walking route from where you stand:\n\n• < 100 m → shows metres.\n• ≥ 100 m → shows km with one decimal.\n• Minutes = km × 12 (average stroll)."
     },
     {
-      "name": "Innovation Museum",
-      "category": "Sightseeing",
-      "latlng": "0.0080,0.0020",
-      "comment": "Hands-on exhibits about future tech",
-      "link": ""
+      "name": "4️⃣  Buy a guide (⚡ one-time €5)",
+      "comment": "Tap **Get this city** → checkout on Gumroad.\nYou’ll receive an email & receipt **with a licence key**."
+    },
+    {
+      "name": "5️⃣  Unlock with your key",
+      "comment": "Back in City Curator tap **I have a code 🔑**, paste the key and you’re done.\n\n✓ Loads instantly ✓ Works offline ✓ The key never expires."
+    },
+    {
+      "name": "6️⃣  Use the key on more devices",
+      "comment": "Paste the same key on your phone, tablet or laptop — no extra charge.\n(Each device stores the key *only in your own browser*.)"
+    },
+    {
+      "name": "7️⃣  Offline / Add to Home Screen",
+      "comment": "The first time you open a city, data is saved for offline use.\nAdd the site to your phone’s home screen for a clean, app-like icon."
+    },
+    {
+      "name": "8️⃣  Geolocation not working?",
+      "comment": "• Make sure Location Services are on for your browser.\n• Still blocked? Tap **Enable my location** in the yellow banner.\n• You can always browse the list without location."
+    },
+    {
+      "name": "🚀  Ready?",
+      "comment": "Switch to **Osaka** or **Hong Kong** in the drop-down and explore!\n\nNeed help? Email us any time at support@citycurator.app"
     }
   ]
   

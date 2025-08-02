@@ -179,6 +179,12 @@
 }
 .unlock:hover{ background:var(--color-card); }
 
+.comment{
+  margin-top:0.45rem;
+  font-size:0.9rem;
+  opacity:0.9;
+  line-height:1.4;
+}
 
 
 
