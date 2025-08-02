@@ -127,6 +127,7 @@
   display:block;            /* fills the card */
   color:inherit;
   text-decoration:none;
+  position:relative; 
 }
 .place-title{               /* same look as before */
   font-weight:500;
@@ -143,4 +144,21 @@
   text-decoration:none;
 }
 .ext:hover{ text-decoration:underline; }
+
+.ext-icon{
+  position:absolute;
+  top:50%;
+  right:10px;                 /* snug inside the pill */
+  transform:translateY(-50%); /* vertically centred */
+  font-size:1.1 rem;
+  cursor:pointer;
+  line-height:1;
+  color:var(--color-text);
+}
+.ext-icon:hover{ text-decoration:underline; }
+
+
+
+
+
 

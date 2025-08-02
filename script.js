@@ -101,28 +101,40 @@ function render(){
 
     listWrap.innerHTML = visible.map(p => `
       <li class="place-item">
-        <a class="place-link"
-           href="https://www.google.com/maps?q=${p.latitude},${p.longitude}"
-           target="_blank" rel="noopener">
-          <div class="place-title">
-            ${p.name}
+        <div class="card-inner">
+          <!-- ── Front (maps link) ── -->
+          <a class="card-face place-link"
+             href="https://www.google.com/maps?q=${p.latitude},${p.longitude}"
+             target="_blank" rel="noopener">
+            <div class="place-title">${p.name}</div>
             ${
               p.link
-                ? `<span class="ext"
-                         onclick="event.stopPropagation(); window.open('${p.link}','_blank','noopener');">
-                     🔗
-                   </span>`
-                : ''
+                ? `<span class="ext-icon"
+                       onclick="event.stopPropagation(); window.open('${p.link}','_blank','noopener');">
+                  🟡
+                </span>`
+              : ''
             }
+            <span class="place-meta">
+              <span class="cat">${p.category}</span> • ${
+                p.distance != null
+                  ? `📍 ${formatDistance(p.distance)} • ${p.minutes} min`
+                  : '📍 —'
+              }
+            </span>
+            <span class="flip-dot"
+                  onclick="event.stopPropagation(); this.closest('.place-item').classList.toggle('flipped');">
+            </span>
+          </a>
+    
+          <!-- ── Back (comment) ── -->
+          <div class="card-face card-back">
+            ${p.comment || '—'}
+            <span class="flip-dot"
+                  onclick="this.closest('.place-item').classList.toggle('flipped');">
+            </span>
           </div>
-          <span class="place-meta">
-            <span class="cat">${p.category}</span> • ${
-              p.distance != null
-                ? `📍 ${formatDistance(p.distance)} • ${p.minutes} min`
-                : '📍 —'
-            }
-          </span>
-        </a>
+        </div>
       </li>
     `).join('');
 }

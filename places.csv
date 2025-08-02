@@ -1,14 +1,200 @@
 city;name;category;latlng;comment;link
-Hong Kong;The Bear;Food;22.2819,114.1589;cosy craft-beer gastropub;https://thebear.hk
-Hong Kong;Kapok;Shopping;22.2810,114.1524;local design & lifestyle store;https://kapok.com
-Hong Kong;PMQ;Sightseeing;22.2834,114.1517;heritage hub for art markets;https://www.pmq.org.hk
-Hong Kong;Yardbird;Food;22.2851,114.1510;famous yakitori no-reservation spot;https://yardbirdrestaurant.com
-Hong Kong;Gough St.;Shopping;22.2831,114.1529;indie boutiques + cafés strip;
-Hong Kong;Star Ferry;Sightseeing;22.2940,114.1690;classical harbour crossing;https://www.starferry.com.hk
-Tokyo;Koffee Mameya;Food;35.6644,139.7093;bean-centric coffee tasting bar;https://koffeemameya.com
-Tokyo;Dover St. Market;Shopping;35.6693,139.7034;avant-garde fashion multibrand;https://ginza.doverstreetmarket.com
-Tokyo;teamLab Borderless;Sightseeing;35.6272,139.7796;immersive digital art museum;https://borderless.teamlab.art
-Oslo;Vippa;Food;59.9020,10.7487;harbourfront street-food hall;https://vippa.no
-Oslo;Fuglen Coffee;Food;59.9144,10.7419;retro café & cocktail bar;https://fuglen.no
-Oslo;Moniker;Shopping;59.9103,10.7395;curated Scandinavian menswear;https://moniker.no
-Oslo;Østbanehallen;Sightseeing;59.9116,10.7528;old station arcade of eateries;https://ostbanehallen.no
+Osaka;Osaka Castle;Sightseeing;34.68730,135.52620;Impressive reconstructed castle with history museum and cherry blossoms;https://www.osakacastle.net
+Osaka;Abeno Harukas;Sightseeing;34.64570,135.51380;Sky-high views from Japan's tallest skyscraper and mall;https://www.abenoharukas-300.jp/en
+Osaka;Umeda Sky Building;Sightseeing;34.70550,135.48910;Architectural marvel with floating garden observatory panoramas;https://www.kuchu-teien.com
+Osaka;Shitenno-ji Temple;Sightseeing;34.65250,135.51720;Ancient Buddhist temple with pagoda and serene gardens;https://www.shitennoji.or.jp
+Osaka;Sumiyoshi Taisha;Sightseeing;34.61240,135.49100;"Oldest shrine; distinctive straight-line bridge and festival site";https://www.sumiyoshitaisha.net
+Osaka;Tsutenkaku Tower;Sightseeing;34.65290,135.50650;Iconic tower in retro Shinsekai district with observation deck;https://www.tsutenkaku.co.jp
+Osaka;Osaka Aquarium Kaiyukan;Sightseeing;34.65450,135.42890;World-class aquarium with giant whale sharks and immersive tanks;https://www.kaiyukan.com
+Osaka;Tempozan Ferris Wheel;Sightseeing;34.65400,135.43010;Giant waterfront Ferris wheel offering harbour views;https://www.senyo.co.jp/tempozan
+Osaka;Osaka Museum of History;Sightseeing;34.68280,135.52650;Modern museum tracing Osaka's past through interactive exhibits;https://www.mus-his.city.osaka.jp
+Osaka;National Bunraku Theater;Sightseeing;34.67590,135.50970;Traditional puppet theatre showcasing Japanese bunraku performances;https://www.ntj.jac.go.jp/bunraku
+Osaka;National Art Museum;Sightseeing;34.69130,135.50330;Underground museum featuring modern and contemporary art;https://www.nmao.go.jp
+Osaka;Minoo Park;Sightseeing;34.84540,135.47030;Forest park with waterfall and vibrant autumn foliage;https://www.mino-park.jp
+Osaka;Osaka Mint Bureau;Sightseeing;34.69830,135.51360;Riverside museum famous for cherry-blossom tunnel;https://www.mint.go.jp
+Osaka;Hozenji Temple;Sightseeing;34.66900,135.50280;Tiny moss-covered temple hidden off lantern-lit alley;
+Osaka;Hozenji Yokocho;Sightseeing;34.66930,135.50270;Atmospheric stone alley lined with izakaya and lanterns;
+Osaka;Nakanoshima Park;Sightseeing;34.69300,135.50650;Riverside park with rose garden and cultural buildings;
+Osaka;Utsubo Park;Sightseeing;34.68340,135.49400;Urban oasis known for tennis courts and roses;
+Osaka;Kids Plaza Osaka;Sightseeing;34.70490,135.51090;Interactive museum encouraging hands-on play and exploration;https://www.kidsplaza.or.jp
+Osaka;Osaka Science Museum;Sightseeing;34.69190,135.50320;Four-floor museum with planetarium and fun experiments;https://www.sci-museum.jp
+Osaka;Osaka Tenmangu Shrine;Sightseeing;34.69690,135.51000;Historic shrine hosting Tenjin Matsuri festival;https://osakatemmangu.or.jp
+Osaka;Expo ’70 Commemorative Park;Sightseeing;34.82270,135.52510;Spacious park with Tower of the Sun and gardens;https://www.expo70-park.jp
+Osaka;Cup Noodles Museum Osaka Ikeda;Sightseeing;34.82730,135.42950;Interactive museum exploring instant ramen history and DIY noodles;https://www.cupnoodles-museum.jp/en/osaka_ikeda
+Osaka;Osaka Museum of Housing and Living;Sightseeing;34.70560,135.51150;Life-size Edo-era street recreated indoors;https://www.osaka-angen.org/konjyakukan
+Osaka;Solaniwa Onsen;Sightseeing;34.65340,135.45060;Modern onsen theme park blending relaxation and gardens;https://www.solaniwa.com/en
+Osaka;Sumiyoshi Park;Sightseeing;34.61300,135.49060;Coastal park with lighthouse, playground and birdwatching;
+Osaka;Aizendo Shomanin Temple;Sightseeing;34.65350,135.51760;Hidden love temple devoted to matchmaking blessings;
+Osaka;Nakanoshima Library;Sightseeing;34.69160,135.50290;Elegant Neo-Baroque library with reading rooms and exhibits;https://www.library.pref.osaka.jp
+Osaka;Mozu Tombs;Sightseeing;34.57360,135.48830;Ancient keyhole-shaped kofun burial mounds UNESCO-listed;https://www.sakai-tcb.or.jp/english
+Osaka;Umeda Arts Theater;Sightseeing;34.70580,135.49540;Performing arts venue hosting Broadway-style shows;https://www.umegei.com
+Osaka;Osaka Station City;Sightseeing;34.70250,135.49590;Huge station complex with shopping, cinema and rooftop farm;https://osakastationcity.com
+Osaka;Kuromon Ichiba Market;Food;34.66540,135.50630;Lively market famous for fresh seafood and street food;https://kuromon.com
+Osaka;Dotonbori;Food;34.66870,135.50110;Neon-lit canal district known for eateries and Glico sign;
+Osaka;Endo Sushi;Food;34.67500,135.46890;Market sushi bar renowned for melt-in-mouth fresh fish;https://www.endo-sushi.com
+Osaka;Ichiran Ramen Namba;Food;34.66680,135.50320;Popular ramen chain with individual booths and rich broth;https://ichiran.com
+Osaka;Kani Doraku Dotonbori;Food;34.66890,135.50240;Crab-focused restaurant marked by giant moving crab sign;https://douraku.co.jp
+Osaka;Kushikatsu Daruma;Food;34.65270,135.50630;Iconic spot serving deep-fried skewers and beer;https://www.kushikatu-daruma.com
+Osaka;Kinryu Ramen;Food;34.66870,135.50130;Casual street ramen stand open 24 hours;
+Osaka;Mizuno Okonomiyaki;Food;34.66720,135.50430;Legendary okonomiyaki joint using secret batter recipe;
+Osaka;Tsuruhashi Fugetsu;Food;34.66600,135.51390;Okonomiyaki restaurant grilling savoury pancakes tableside;https://www.fugetsu.jp
+Osaka;Rikuro Ojisan no Cheesecake;Food;34.66590,135.50320;Fluffy baked cheesecakes that jiggle delightfully;https://www.rikuro.co.jp
+Osaka;Pablo Cheese Tart;Food;34.67170,135.50270;Freshly baked cheese tarts with gooey centres;https://www.pablo3.com
+Osaka;Gram Cafe Pancakes;Food;34.66900,135.50060;Famous for thick fluffy premium pancakes;https://www.cafe-gram.com
+Osaka;551 Horai;Food;34.66470,135.50210;Beloved shop selling steamed pork buns and dim sum;https://www.551horai.co.jp
+Osaka;Matsusaka Gyu Yakiniku M;Food;34.66900,135.50280;Grill premium Matsusaka beef in cosy restaurant;https://matsusaka-project.com
+Osaka;Okonomiyaki Chitose;Food;34.66740,135.50790;Homestyle okonomiyaki in retro eatery;
+Osaka;Takoyaki Aizuya;Food;34.67900,135.50280;Inventor of takoyaki serving original octopus balls;
+Osaka;Brooklyn Roasting Company Kitahama;Food;34.68900,135.50720;Hip café roasting beans and serving espresso;https://brooklynroasting.jp
+Osaka;Cafe Taiyo no To;Food;34.70970,135.46740;Artistic cafe decorated with tower-inspired murals;
+Osaka;Lilo Coffee Roasters;Food;34.66890,135.50120;Specialty coffee shop with carefully sourced beans;https://coffee.liloinveve.com
+Osaka;Craft Beer Works Kamikaze;Food;34.66750,135.49780;Taproom pouring local craft beers and burgers;
+Osaka;Shinsaibashi-suji Shopping Arcade;Shopping;34.67210,135.50130;Long covered arcade packed with fashion boutiques;https://www.shinsaibashi.or.jp
+Osaka;Tenjinbashi-suji Shopping Street;Shopping;34.70440,135.51870;Japan's longest shopping street with local vendors;https://tenjin123.com
+Osaka;Grand Front Osaka;Shopping;34.70540,135.49560;Modern complex with shops, restaurants and lush terraces;https://www.grandfront-osaka.jp
+Osaka;Orange Street;Shopping;34.67320,135.49240;Trendy street for furniture, design and lifestyle shops;
+Osaka;Amerikamura;Shopping;34.67030,135.49750;Bohemian district with vintage stores and street art;
+Osaka;Namba Parks;Shopping;34.66340,135.50190;Terraced mall blending shopping with rooftop garden;https://nambaparks.com
+Osaka;Namba City;Shopping;34.66640,135.50190;Underground mall connecting to Namba Station;https://www.nambacity.com
+Osaka;Namba Walk;Shopping;34.66600,135.50100;Subterranean shopping street linking subway stations;https://www.nambawalk.jp
+Osaka;Mandarake Grandchaos;Shopping;34.67090,135.49730;Massive manga and collectibles emporium;https://www.mandarake.co.jp
+Osaka;Denden Town;Shopping;34.66790,135.50710;Electronics and anime district akin to Akihabara;
+Osaka;Pokemon Center Osaka;Shopping;34.70430,135.49560;Official shop for Pokémon fans and merchandise;https://www.pokemon.co.jp/shop
+Osaka;Abeno Q's Mall;Shopping;34.64580,135.51340;Large mall with fashion, food and amusement park;https://qs-mall.jp
+Osaka;Rinku Premium Outlets;Shopping;34.39800,135.30040;Outlet mall near airport with international brands;https://www.premiumoutlets.co.jp
+Osaka;Tempozan Marketplace;Shopping;34.65430,135.42920;Harbor mall with souvenirs and aquarium gifts;
+Osaka;Hankyu Department Store;Shopping;34.70350,135.49860;Historic department store offering upscale goods;https://www.hankyu-dept.co.jp
+Osaka;Daimaru Shinsaibashi;Shopping;34.67350,135.50140;Luxury department store blending old and new;https://www.daimaru.co.jp
+Osaka;BIGSTEP;Shopping;34.66970,135.49680;Unique mall with music, fashion and live events;https://big-step.co.jp
+Osaka;Takashimaya Osaka;Shopping;34.66690,135.50150;High-end department store famed for food hall;https://www.takashimaya.co.jp
+Hong Kong;Victoria Peak;Sightseeing;22.27590,114.14540;Spectacular harbor panoramas from iconic hilltop lookout;https://www.thepeak.com.hk
+Hong Kong;Peak Tram;Sightseeing;22.27750,114.15860;Historic funicular ride climbing steep hillside to The Peak;https://www.thepeak.com.hk/en/5_peak-tram
+Hong Kong;Star Ferry;Sightseeing;22.28710,114.16570;Classic green ferry crossing Victoria Harbour with skyline views;https://www.starferry.com.hk
+Hong Kong;Hong Kong Disneyland;Sightseeing;22.31290,114.03870;Magical theme park with rides and Disney parades;https://www.hongkongdisneyland.com
+Hong Kong;Ocean Park;Sightseeing;22.24840,114.17500;Marine park mixing animal exhibits and thrill rides;https://www.oceanpark.com.hk
+Hong Kong;Tian Tan Buddha;Sightseeing;22.25650,113.89920;Giant bronze Buddha statue atop scenic Ngong Ping plateau;https://www.plm.org.hk
+Hong Kong;Po Lin Monastery;Sightseeing;22.25550,113.90070;Serene monastery with incense and vegetarian cuisine;https://www.plm.org.hk
+Hong Kong;Ngong Ping 360;Sightseeing;22.29070,113.94330;Cable car journey over mountains to Lantau attractions;https://www.np360.com.hk
+Hong Kong;Man Mo Temple;Sightseeing;22.28570,114.14960;Historic temple dedicated to literature and war gods;
+Hong Kong;Wong Tai Sin Temple;Sightseeing;22.34200,114.19340;Colourful Taoist temple reputed for answered prayers;https://www.wongtaisintemple.hk
+Hong Kong;Chi Lin Nunnery;Sightseeing;22.34150,114.20310;Elegant wooden monastery built without nails;https://www.chilin.org
+Hong Kong;Nan Lian Garden;Sightseeing;22.33960,114.20390;Peaceful Tang-style garden with ponds and pavilions;https://www.nanliangarden.org
+Hong Kong;Tai Kwun;Sightseeing;22.28110,114.15380;Heritage complex blending colonial prison and art spaces;https://www.taikwun.hk
+Hong Kong;PMQ;Sightseeing;22.28360,114.15240;Creative hub for designers with shops and exhibitions;https://www.pmq.org.hk
+Hong Kong;Central Market;Sightseeing;22.28300,114.15550;Revitalised market mixing heritage architecture with shops;https://www.centralmarket.hk
+Hong Kong;Avenue of Stars;Sightseeing;22.29290,114.17200;Promenade celebrating Hong Kong cinema with star plaques;https://www.avenueofstars.com.hk
+Hong Kong;Symphony of Lights;Sightseeing;22.29300,114.17180;Nightly multimedia light show across harbour buildings;https://www.discoverhongkong.com
+Hong Kong;Hong Kong Museum of History;Sightseeing;22.29710,114.17750;Museum exploring Hong Kong's past and cultural roots;https://hk.history.museum
+Hong Kong;Hong Kong Science Museum;Sightseeing;22.30110,114.17630;Interactive exhibits and giant energy machine;https://hk.science.museum
+Hong Kong;Hong Kong Museum of Art;Sightseeing;22.29430,114.17180;Gallery showcasing Chinese and local artworks;https://hk.art.museum
+Hong Kong;M+ Museum;Sightseeing;22.30300,114.16280;Contemporary museum for visual culture in West Kowloon;https://www.mplus.org.hk
+Hong Kong;Hong Kong Palace Museum;Sightseeing;22.30240,114.16120;Treasures from Beijing's Palace Museum displayed elegantly;https://www.hkpm.org.hk
+Hong Kong;Xiqu Centre;Sightseeing;22.30330,114.16340;Modern opera house dedicated to Cantonese opera;https://www.westkowloon.hk/en/xiqu-centre
+Hong Kong;Hong Kong Zoological and Botanical Gardens;Sightseeing;22.27790,114.15630;Oldest zoo and garden with free admission;https://www.lcsd.gov.hk/en/parks/hkzbg/index.html
+Hong Kong;Ten Thousand Buddhas Monastery;Sightseeing;22.38740,114.19170;Hillside path lined with golden Buddha statues;https://www.ten-thousand-buddhas-monastery.com
+Hong Kong;Kowloon Walled City Park;Sightseeing;22.32850,114.19110;Garden on former lawless enclave with exhibits;https://www.lcsd.gov.hk
+Hong Kong;Hong Kong Heritage Museum;Sightseeing;22.38260,114.18590;Showcases art, history and Bruce Lee memorabilia;https://hk.heritage.museum
+Hong Kong;Tai O Fishing Village;Sightseeing;22.25230,113.85670;Stilt-house village preserving traditional fishing life;
+Hong Kong;Lamma Island;Sightseeing;22.22370,114.11010;Laid-back island for hikes, seafood and beaches;
+Hong Kong;Dragon’s Back Trail;Sightseeing;22.24550,114.24080;Scenic ridge hike with coastal panoramas;
+Hong Kong;Sky100 Observation Deck;Sightseeing;22.30310,114.16050;100th-floor deck offering 360-degree city vistas;https://sky100.com.hk
+Hong Kong;Tsim Sha Tsui Promenade;Sightseeing;22.29300,114.17280;Waterfront walkway with skyline views and breezes;
+Hong Kong;Sai Kung East Dam;Sightseeing;22.36630,114.38640;Dramatic volcanic rock formations in geopark;
+Hong Kong;West Kowloon Art Park;Sightseeing;22.30400,114.16190;Green waterfront park hosting arts and performances;https://www.westkowloon.hk
+Hong Kong;Hong Kong Observation Wheel;Sightseeing;22.28510,114.16540;Ferris wheel giving harbour views from Central;https://www.hkow.hk
+Hong Kong;Repulse Bay Beach;Sightseeing;22.23030,114.19430;Golden crescent beach with colonial-style pavilion;
+Hong Kong;Tim Ho Wan Sham Shui Po;Food;22.33080,114.15910;Michelin-starred dim sum at affordable prices;https://www.timhowan.com
+Hong Kong;Yat Lok Roast Goose;Food;22.28340,114.15560;Legendary roast goose with crispy skin;
+Hong Kong;Mak's Noodles;Food;22.28090,114.15740;Iconic wonton noodles in clear broth;
+Hong Kong;Kau Kee Beef Brisket;Food;22.28210,114.15290;Tender beef brisket noodles beloved by locals;
+Hong Kong;Luk Yu Tea House;Food;22.28370,114.15570;Classic dim sum teahouse with vintage charm;
+Hong Kong;Lei Garden Mong Kok;Food;22.32030,114.17090;Upscale Cantonese cuisine and dim sum;https://www.leigarden.hk
+Hong Kong;Man Wah;Food;22.28240,114.15820;Elegant Cantonese restaurant on high floor with harbour views;https://www.mandarinoriental.com/hong-kong
+Hong Kong;Spring Deer;Food;22.29800,114.17060;Old-school eatery serving famous Peking duck;
+Hong Kong;Tai Cheong Bakery;Food;22.28150,114.15540;Iconic bakery known for buttery egg tarts;
+Hong Kong;Honolulu Cafe;Food;22.28130,114.15810;Cha chaan teng famous for flaky egg tarts;
+Hong Kong;Lan Fong Yuen;Food;22.28220,114.15370;Home of silky milk tea and chicken noodles;
+Hong Kong;Little Bao;Food;22.28190,114.15310;Creative fusion baos with inventive fillings;https://www.little-bao.com
+Hong Kong;Yardbird;Food;22.28450,114.15180;Trendy yakitori bar with lively vibe;https://yardbirdrestaurant.com
+Hong Kong;Oddies Foodies;Food;22.28190,114.15250;Dessert shop with egg waffles and gelato;
+Hong Kong;Mammy Pancake;Food;22.29880,114.17240;Street stall selling crisp egg waffles;
+Hong Kong;Kam Wah Cafe;Food;22.32260,114.17050;Local cafe renowned for pineapple buns;
+Hong Kong;One Dim Sum;Food;22.32270,114.16830;Affordable one-Michelin-star dim sum joint;
+Hong Kong;Tsim Chai Kee;Food;22.27910,114.17280;Huge shrimp wontons and noodles in broth;
+Hong Kong;Kung Wo Tofu Factory;Food;22.33120,114.15950;Historic tofu shop with silky tofu pudding;
+Hong Kong;Chuen Kee Seafood;Food;22.38390,114.27060;Sai Kung restaurant offering fresh seafood banquets;
+Hong Kong;Mak Man Kee Noodle Shop;Food;22.30430,114.16900;Simple shop specialising in wonton noodles;
+Hong Kong;The Chairman;Food;22.28140,114.15340;Seasonal Cantonese tasting menus using local ingredients;https://thechairmancapital.com
+Hong Kong;Harbour City;Shopping;22.29450,114.16990;Vast harbourfront mall with luxury shops and views;https://www.harbourcity.com.hk
+Hong Kong;Times Square;Shopping;22.27820,114.18360;Iconic Causeway Bay mall anchored by huge atrium;https://timessquare.com.hk
+Hong Kong;Sogo Causeway Bay;Shopping;22.28030,114.18270;Massive Japanese department store selling everything;https://www.sogo.com.hk
+Hong Kong;IFC Mall;Shopping;22.28540,114.15870;Upscale mall integrated with skyscraper and station;https://www.ifc.com.hk
+Hong Kong;Landmark;Shopping;22.28090,114.15890;Luxury shopping complex hosting flagship designer boutiques;https://www.landmark.hk
+Hong Kong;Pacific Place;Shopping;22.27840,114.16590;Elegant mall with high-end brands and cinema;https://www.pacificplace.com.hk
+Hong Kong;K11 MUSEA;Shopping;22.29560,114.17340;Art-meets-retail museum mall on waterfront;https://www.k11musea.com
+Hong Kong;Elements Mall;Shopping;22.30340,114.16120;Five-zone mall above Kowloon station with cinema;https://www.elementshk.com
+Hong Kong;Hysan Place;Shopping;22.27980,114.18420;Trendy vertical mall with youth fashion brands;https://www.hysanplace.com.hk
+Hong Kong;Citygate Outlets;Shopping;22.29170,113.94310;Outlet mall near airport offering discounted brands;https://www.citygateoutlets.com.hk
+Hong Kong;Temple Street Night Market;Shopping;22.30960,114.16720;Night market selling street food and quirky goods;
+Hong Kong;Ladies' Market;Shopping;22.31890,114.17310;Bustling market for fashion and souvenirs;
+Osaka;Redhorse Osaka Wheel;Sightseeing;34.65420,135.43080;Huge 123-m Ferris wheel offering panoramic city vistas;https://osaka-wheel.com
+Osaka;Namba Shrine;Sightseeing;34.67630,135.49780;Ancient shrine with lion statues amid downtown hustle;https://www.nanbasan.com
+Osaka;Cosmo Tower;Sightseeing;34.64440,135.43660;One of Osaka's tallest towers with observation deck;https://www.sakishima-kanko.com
+Osaka;Osaka Central Public Hall;Sightseeing;34.69390,135.50140;Neo-Renaissance hall hosting concerts and events;https://osaka-chuokokaido.jp
+Osaka;Nagai Park;Sightseeing;34.61070,135.51960;Large park with botanical garden and open-air stadium;https://www.nagaipark.com
+Osaka;Tsurumi Ryokuchi Park;Sightseeing;34.70810,135.57360;Spacious flower-filled park with windmill and pond;https://www.tsurumi-ryokuchi.jp
+Osaka;Yodogawa River Park;Sightseeing;34.72870,135.50370;Riverside green space ideal for jogging and picnics;https://www.yodogawa-park.jp
+Osaka;Sakuya Konohana Kan;Sightseeing;34.68850,135.57750;Massive greenhouse featuring rare global plants;https://www.sakuyakonohana.com
+Osaka;Osaka Museum of Natural History;Sightseeing;34.61120,135.52190;Displays dinosaurs fossils and interactive science exhibits;https://omnh.jp
+Osaka;teamLab Botanical Garden;Sightseeing;34.61220,135.52110;Nighttime digital art illuminations in botanical garden;https://www.teamlab.art/e/botanicalgarden
+Osaka;HEP Five Ferris Wheel;Sightseeing;34.70460,135.49850;Red Ferris wheel on shopping mall rooftop;https://www.hepfive.jp
+Osaka;Tsuyunoten Shrine;Sightseeing;34.70300,135.49430;Small shrine famous for romantic matchmaking rituals;https://ohatsu.or.jp
+Osaka;Minami Mido Temple;Sightseeing;34.67630,135.50080;Historic Jodo-shinshu temple near Namba;https://minamimido.jp
+Osaka;Nakanoshima Museum of Art;Sightseeing;34.69470,135.50210;Modern art museum on river island opened 2022;https://nakka-art.jp
+Osaka;Spa World;Sightseeing;34.65270,135.50640;Super onsen complex with global-themed baths and slides;https://www.spaworld.jp
+Osaka;HEP Five Shopping Mall;Shopping;34.70440,135.49830;Trendy mall catering to youth fashion and entertainment;https://www.hepfive.jp
+Osaka;Diamor Osaka;Shopping;34.70220,135.49590;Underground mall with boutiques and gourmet food hall;https://www.diamor.jp
+Osaka;Namba Marui;Shopping;34.66390,135.50350;Large department store with fashion and cosmetics;https://www.0101.co.jp/089
+Osaka;Hanshin Department Store;Shopping;34.70250,135.49830;Upmarket department store known for gourmet food basement;https://www.hanshin-dept.jp
+Osaka;Kitahama Retro;Food;34.68720,135.50470;Charming British-style tearoom serving scones and cakes;https://kitahamaretro.com
+Osaka;Okonomiyaki Kiji;Food;34.70780,135.50060;Beloved okonomiyaki joint with wait-worthy pancakes;https://okonomiyakikiji.com
+Osaka;Tonkatsu KYK;Food;34.70240,135.49630;Popular tonkatsu chain famous for crispy pork cutlets;https://www.kyk.co.jp
+Osaka;LeBRESSO;Food;34.67460,135.51530;Specialty toast cafe with creative toppings and brews;https://lebresso.com
+Osaka;Yoshino Sushi Honten;Food;34.66950,135.50090;Historic sushi restaurant established in 1907;https://www.yoshinosushi.com
+Osaka;Ramen Yashichi;Food;34.70460,135.49620;Acclaimed ramen shop serving rich chicken paitan broth;https://ramen-yashichi.com
+Osaka;Tako Tako King;Food;34.67240,135.50430;Takoyaki stand with multiple fillings and beers;https://takotaking.com
+Osaka;Daiki Suisan Kaiten-zushi;Food;34.66000,135.50470;Affordable conveyor-belt sushi chain near Namba;https://www.daiki-suisan.co.jp
+Osaka;Udon Daikichi;Food;34.67200,135.50260;Homely udon shop serving thick noodles and tempura;https://udondaikichi.com
+Osaka;Fujiya 1935;Food;34.69220,135.50330;Michelin-starred modern Spanish-Japanese cuisine;https://fujiya1935.com
+Osaka;Takoyaki Tamade;Food;34.65560,135.48390;24-hour takoyaki stall satisfying late-night cravings;https://takoyakitamade.com
+Hong Kong;Clock Tower;Sightseeing;22.29510,114.17110;Historic Tsim Sha Tsui tower from old railway terminus;https://www.discoverhongkong.com
+Hong Kong;Tsz Shan Monastery;Sightseeing;22.46020,114.20740;Serene monastery with 76m Guan Yin statue;https://www.tszshan.org
+Hong Kong;Hong Kong Maritime Museum;Sightseeing;22.28560,114.15990;Museum exploring city's seafaring history and trade;https://www.hkmaritimemuseum.org
+Hong Kong;Hong Kong Park;Sightseeing;22.27700,114.16480;Oasis of lakes aviary and conservatory in Central;https://www.lcsd.gov.hk
+Hong Kong;Tai O Heritage Hotel;Sightseeing;22.25890,113.85700;Restored colonial police station turned boutique hotel;https://www.taioheritagehotel.com
+Hong Kong;Wisdom Path;Sightseeing;22.25510,113.90730;Wooden pillars carved with Buddhist scriptures;https://www.discoverhongkong.com
+Hong Kong;Sai Wan Swimming Shed;Sightseeing;22.27600,114.11540;Retro pier for swimming and sunset photos;https://www.discoverhongkong.com
+Hong Kong;Yuen Po Street Bird Garden;Sightseeing;22.32080,114.17320;Traditional garden with songbird stalls and cages;https://www.discoverhongkong.com
+Hong Kong;Hong Kong Space Museum;Sightseeing;22.29410,114.16980;Curved planetarium offering astronomy exhibits and shows;https://hk.space.museum
+Hong Kong;Kowloon Park;Sightseeing;22.30060,114.17180;Urban park with aviary kung fu statues and pond;https://www.lcsd.gov.hk
+Hong Kong;Joy Hing Roasted Meat;Food;22.27960,114.16450;Famous char siu restaurant with succulent roast meats;https://www.facebook.com/joyhingroastedmeat
+Hong Kong;Tsui Wah Restaurant;Food;22.28010,114.15340;Cha chaan teng chain offering milk tea and curry;https://www.tsuiwah.com
+Hong Kong;Yung Kee Restaurant;Food;22.28050,114.15430;Legendary roast goose restaurant in Central;https://www.yungkee.com.hk
+Hong Kong;Mido Cafe;Food;22.29120,114.14720;Retro tiled cha chaan teng with baked pork chop rice;https://www.discoverhongkong.com
+Hong Kong;Din Tai Fung TST;Food;22.29890,114.17220;Taiwanese xiao long bao chain beloved for soup dumplings;https://dintaifung.com.hk
+Hong Kong;Under Bridge Spicy Crab;Food;22.28270,114.18520;Late-night seafood spot famous for chili crab;https://www.underbridge.com.hk
+Hong Kong;Lau Sum Kee Noodles;Food;22.31630,114.17070;Wonton noodles hand-made since 1940s;https://www.lausumkee.com
+Hong Kong;Lee Keung Kee Egg Waffles;Food;22.28800,114.14940;Street vendor known for crispy egg waffles;https://www.leekeungkee.com
+Hong Kong;Hop Yik Tai;Food;22.28630,114.15260;Tofu pudding shop with cheung fun rice rolls;https://www.hopyiktai.com
+Hong Kong;Kee Wah Bakery;Food;22.30020,114.16990;Established bakery selling mooncakes and pastries;https://www.keewah.com
+Hong Kong;Sneaker Street;Shopping;22.31970,114.17130;Rows of sports shoe shops in Mong Kok;https://www.discoverhongkong.com
+Hong Kong;Ap Liu Street Market;Shopping;22.33080,114.15910;Electronics flea market with gadgets and radio parts;https://www.discoverhongkong.com
+Hong Kong;Flower Market;Shopping;22.32100,114.17860;Fragrant lanes filled with blooms and greenery;https://www.discoverhongkong.com
+Hong Kong;Goldfish Market;Shopping;22.32090,114.17580;Pet shops selling colourful fish and reptiles;https://www.discoverhongkong.com
+Hong Kong;Jade Market;Shopping;22.31260,114.17030;Market stalls trading jade and jewelry;https://www.discoverhongkong.com
+Hong Kong;Stanley Market;Shopping;22.21820,114.21000;Seaside bazaar with souvenirs and relaxed vibe;https://www.discoverhongkong.com
+Hong Kong;Cheung Sha Wan Fashion Street;Shopping;22.33210,114.15810;Wholesale clothing district for bargain fashion;https://www.discoverhongkong.com
+Hong Kong;City Plaza;Shopping;22.28200,114.21530;Large East Hong Kong mall with skating rink;https://www.cityplaza.com
+Hong Kong;Festival Walk;Shopping;22.33570,114.17560;Upscale mall with shopping cinema and ice rink;https://www.festivalwalk.com.hk
+Hong Kong;1881 Heritage;Shopping;22.29390,114.16860;Restored colonial building housing boutiques and restaurants;https://www.1881heritage.com
+
